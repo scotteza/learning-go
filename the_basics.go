@@ -7,7 +7,12 @@ import (
 	"time"
 )
 
-var c, python, java bool
+var (
+	c, python, java bool
+	i, j            int  = 1, 2
+	x1, x2               = 3, false
+	check_my_type   bool = false
+)
 
 func main() {
 	fmt.Println("Hello, everyone")
@@ -31,8 +36,14 @@ func main() {
 	fmt.Println(x)
 	fmt.Println(y)
 
-	var i int
-	fmt.Println(i, c, python, java)
+	k := 3
+
+	// Note how this overrides the value of I from the outer scope
+	var i int = 42
+	fmt.Println("i is ", i)
+	fmt.Println(i, c, python, java, i, j, x1, x2, k)
+
+	fmt.Printf("Type: %T, Value: %v\n", check_my_type, check_my_type)
 }
 
 func add(x int, y int) int {
