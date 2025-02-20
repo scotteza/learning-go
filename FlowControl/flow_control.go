@@ -60,6 +60,9 @@ func main() {
 	default:
 		fmt.Println("Good evening!")
 	}
+
+	defer fmt.Println("World")
+	fmt.Println("Hello ")
 }
 
 func infiniteLoop(sum int) {
