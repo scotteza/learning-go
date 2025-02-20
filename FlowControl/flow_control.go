@@ -66,6 +66,10 @@ func main() {
 
 	for i := 0; i < 10; i++ {
 		defer fmt.Println(i)
+
+		if i == 5 {
+			panic("Exiting early to see how defer runs after a panic")
+		}
 	}
 }
 
