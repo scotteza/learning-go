@@ -69,6 +69,12 @@ func main() {
 
 		if i == 5 {
 			panic("Exiting early to see how defer runs after a panic")
+
+			// Will not run defer statements
+			// os.Exit(1)
+
+			// Will not run defer statements
+			// log.Fatal("Exiting early to see how defer runs after a panic")
 		}
 	}
 }
